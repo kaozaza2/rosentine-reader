@@ -10,7 +10,7 @@ class Permission extends Model
     protected function casts(): array
     {
         return [
-            'permission_level' => PermissionLevel::class,
+            'level' => PermissionLevel::class,
         ];
     }
 
@@ -19,8 +19,8 @@ class Permission extends Model
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
-    public function hasPermission(PermissionLevel $level): bool
+    public function has(PermissionLevel $level): bool
     {
-        return PermissionLevel::from($this->permission_level) >= $level;
+        return $this->level->value >= $level->value;
     }
 }

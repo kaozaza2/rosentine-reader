@@ -11,10 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('permissions', function (Blueprint $table) {
+        Schema::create('comics', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->integer('level')->default(0);
+            $table->string('name');
+            $table->string('alt_name')->nullable();
+            $table->string('slug');
+            $table->boolean('is_complete')->default(0);
+            $table->boolean('is_mature')->default(0);
+            $table->string('description', 2048)->nullable();
             $table->timestamps();
         });
     }
@@ -24,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('permissions');
+        Schema::dropIfExists('comics');
     }
 };

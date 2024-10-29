@@ -11,11 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('permissions', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->integer('level')->default(0);
+            $table->string('name');
+            $table->string('slug');
             $table->timestamps();
+        });
+
+        Schema::create('comic_category', function (Blueprint $table) {
+            $table->unsignedBigInteger('comic_id');
+            $table->unsignedBigInteger('category_id');
         });
     }
 
@@ -24,6 +29,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('permissions');
+        Schema::dropIfExists('categories');
+        Schema::dropIfExists('comic_category');
     }
 };
