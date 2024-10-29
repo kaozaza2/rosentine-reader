@@ -1,3 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700&display=swap");
+
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+
+:root {
+  /* Primary */
+  --color-primary: theme("skin.sky.DEFAULT");
+  --color-primary-50: theme("skin.sky.50");
+  --color-primary-100: theme("skin.sky.100");
+  --color-primary-200: theme("skin.sky.200");
+  --color-primary-300: theme("skin.sky.300");
+  --color-primary-400: theme("skin.sky.400");
+  --color-primary-500: theme("skin.sky.500");
+  --color-primary-600: theme("skin.sky.600");
+  --color-primary-700: theme("skin.sky.700");
+  --color-primary-800: theme("skin.sky.800");
+  --color-primary-900: theme("skin.sky.900");
+  --color-primary-950: theme("skin.sky.950");
+
+  /* Gray */
+  --color-gray-50: theme("skin.gray.50");
+  --color-gray-100: theme("skin.gray.100");
+  --color-gray-200: theme("skin.gray.200");
+  --color-gray-300: theme("skin.gray.300");
+  --color-gray-400: theme("skin.gray.400");
+  --color-gray-500: theme("skin.gray.500");
+  --color-gray-600: theme("skin.gray.600");
+  --color-gray-700: theme("skin.gray.700");
+  --color-gray-800: theme("skin.gray.800");
+  --color-gray-900: theme("skin.gray.900");
+  --color-gray-950: theme("skin.gray.950");
+
+  /* Secondary */
+  --color-secondary: theme("skin.secondary.DEFAULT");
+
+  --color-text-normal: var(--color-gray-100);
+  --color-text-muted: var(--color-gray-400);
+
+  --color-divider: var(--color-gray-600);
+  --color-border: var(--color-gray-700);
+
+  --color-background: var(--color-gray-900);
+  --color-component: var(--color-gray-800);
+  --color-input: var(--color-gray-900);
+
+  /* Fonts */
+  --font-body: "Roboto";
+  --font-head: "Roboto Condensed";
+}
