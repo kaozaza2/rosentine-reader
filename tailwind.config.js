@@ -6,15 +6,15 @@ import aspectRatio from '@tailwindcss/aspect-ratio';
 const htr = (h) => {
     let r = 0, g = 0, b = 0;
     if (h.length === 4) {
-        r = "0x" + h[1] + h[1];
-        g = "0x" + h[2] + h[2];
-        b = "0x" + h[3] + h[3];
+        r = '0x' + h[1] + h[1];
+        g = '0x' + h[2] + h[2];
+        b = '0x' + h[3] + h[3];
     } else if (h.length === 7) {
-        r = "0x" + h[1] + h[2];
-        g = "0x" + h[3] + h[4];
-        b = "0x" + h[5] + h[6];
+        r = '0x' + h[1] + h[2];
+        g = '0x' + h[3] + h[4];
+        b = '0x' + h[5] + h[6];
     }
-    return +r + " " + +g + " " + +b;
+    return +r + ' ' + +g + ' ' + +b;
 };
 
 const wov = (v) => {
@@ -345,8 +345,8 @@ export default {
             },
         },
         colors: {
-            transparent: "transparent",
-            current: "currentColor",
+            transparent: 'transparent',
+            current: 'currentColor',
             black: colors.black,
             white: colors.white,
             sky: colors.sky,
@@ -371,64 +371,82 @@ export default {
             neutral: colors.neutral,
             stone: colors.stone,
             gray: {
-                50: wov("--color-gray-50"),
-                100: wov("--color-gray-100"),
-                200: wov("--color-gray-200"),
-                300: wov("--color-gray-300"),
-                400: wov("--color-gray-400"),
-                500: wov("--color-gray-500"),
-                600: wov("--color-gray-600"),
-                700: wov("--color-gray-700"),
-                800: wov("--color-gray-800"),
-                900: wov("--color-gray-900"),
-                950: wov("--color-gray-950"),
+                50: wov('--color-gray-50'),
+                100: wov('--color-gray-100'),
+                200: wov('--color-gray-200'),
+                300: wov('--color-gray-300'),
+                400: wov('--color-gray-400'),
+                500: wov('--color-gray-500'),
+                600: wov('--color-gray-600'),
+                700: wov('--color-gray-700'),
+                800: wov('--color-gray-800'),
+                900: wov('--color-gray-900'),
+                950: wov('--color-gray-950'),
             },
             primary: {
-                DEFAULT: wov("--color-primary"),
-                50: wov("--color-primary-50"),
-                100: wov("--color-primary-100"),
-                200: wov("--color-primary-200"),
-                300: wov("--color-primary-300"),
-                400: wov("--color-primary-400"),
-                500: wov("--color-primary-500"),
-                600: wov("--color-primary-600"),
-                700: wov("--color-primary-700"),
-                800: wov("--color-primary-800"),
-                900: wov("--color-primary-900"),
-                950: wov("--color-primary-950"),
+                DEFAULT: wov('--color-primary'),
+                50: wov('--color-primary-50'),
+                100: wov('--color-primary-100'),
+                200: wov('--color-primary-200'),
+                300: wov('--color-primary-300'),
+                400: wov('--color-primary-400'),
+                500: wov('--color-primary-500'),
+                600: wov('--color-primary-600'),
+                700: wov('--color-primary-700'),
+                800: wov('--color-primary-800'),
+                900: wov('--color-primary-900'),
+                950: wov('--color-primary-950'),
             },
-            secondary: wov("--color-secondary"),
+            secondary: wov('--color-secondary'),
         },
         extend: {
+            rotate: {
+                '225': '225deg',
+            },
+            animation: {
+                fadeInTop: 'fadeInTop 0.5s ease-out forwards',
+            },
+            keyframes: {
+                fadeInTop: {
+                    '0%': {
+                        filter: 'blur(4px)',
+                        transform: 'translateY(-0.25rem)',
+                    },
+                    '100%': {
+                        filter: '',
+                        transform: 'translateY(0rem)',
+                    },
+                },
+            },
             fontFamily: {
-                sans: ['var(--font-body)', ...defaultTheme.fontFamily.sans],
-                body: ['var(--font-body)', ...defaultTheme.fontFamily.sans],
-                head: ['var(--font-head)', ...defaultTheme.fontFamily.sans],
+                sans: ['var(--font-body), Sarabun', ...defaultTheme.fontFamily.sans],
+                body: ['var(--font-body), Sarabun', ...defaultTheme.fontFamily.sans],
+                head: ['var(--font-head), Sarabun', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                success: "#28a745",
-                danger: "#dc3545",
-                warning: "#ffc107",
-                info: "#17a2b8",
+                success: '#28a745',
+                danger: '#dc3545',
+                warning: '#ffc107',
+                info: '#17a2b8',
                 social: {
-                    facebook: "#3b5998",
-                    x: "#1da1f2",
-                    pinterest: "#bd081c",
-                    whatsapp: "#25d366",
+                    facebook: '#3b5998',
+                    x: '#1da1f2',
+                    pinterest: '#bd081c',
+                    whatsapp: '#25d366',
                 },
             },
             backgroundColor: {
-                background: wov("--color-background"),
-                component: wov("--color-component"),
-                input: wov("--color-input"),
+                background: wov('--color-background'),
+                component: wov('--color-component'),
+                input: wov('--color-input'),
             },
             borderColor: {
-                divider: wov("--color-divider"),
-                border: wov("--color-border"),
+                divider: wov('--color-divider'),
+                border: wov('--color-border'),
             },
             textColor: {
-                normal: wov("--color-text-normal"),
-                muted: wov("--color-text-muted"),
+                normal: wov('--color-text-normal'),
+                muted: wov('--color-text-muted'),
             },
         },
     },

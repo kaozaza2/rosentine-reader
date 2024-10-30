@@ -11,10 +11,12 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-900">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-background">
+            <div class="py-12 md:py-6">
+                <a class="animate-fadeInTop" href="/">
+                    <span class="block h-9 w-auto fill-current uppercase text-4xl text-normal font-head font-bold">
+                        {{ config('app.name', 'Rosentine') }}
+                    </span>
                 </a>
             </div>
 
