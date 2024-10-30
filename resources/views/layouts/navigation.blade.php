@@ -4,7 +4,7 @@
         <div class="flex justify-between h-16">
             <!-- Hamburger -->
             <div class="-ms-2 flex items-center sm:hidden">
-                <button @click="open = !open" class="group inline-flex flex-col items-center justify-center px-2.5 py-3 rounded-md text-gray-500 hover:bg-gray-900 focus:outline-none focus:bg-gray-900 transition duration-150 ease-in-out">
+                <button @click="open = !open" class="group inline-flex flex-col items-center justify-center px-2.5 py-3 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-900 transition duration-150 ease-in-out">
                     <span :class="{'rotate-225 translate-y-1.5': open}" class="block w-5 h-0.5 transition-all duration-300 rounded bg-gray-500 group-hover:bg-gray-400 group-focus:bg-gray-200"></span>
                     <span :class="{'opacity-0': open}" class="block w-5 h-0.5 transition-all duration-300 my-1 rounded bg-gray-500 group-hover:bg-gray-400 group-focus:bg-gray-200"></span>
                     <span :class="{'-rotate-225 -translate-y-1.5': open}" class="block w-5 h-0.5 transition-all duration-300 rounded bg-gray-500 group-hover:bg-gray-400 group-focus:bg-gray-200"></span>
