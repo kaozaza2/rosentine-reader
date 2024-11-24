@@ -11,14 +11,9 @@ class OnlineMangaProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
-    }
-
-    /**
-     * Bootstrap services.
-     */
-    public function boot(): void
-    {
-        //
+        $this->app->singleton(
+            \App\Contract\Service\OnlineRepositoryClient::class,
+            \App\Services\OnlineClientFactory::class,
+        );
     }
 }

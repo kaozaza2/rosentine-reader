@@ -35,6 +35,8 @@ class OnlineClientFactory implements OnlineRepositoryClient
             }
         } catch (ConnectionException $e) {
             report($e);
+
+            throw $e;
         }
 
         return null;
@@ -52,6 +54,8 @@ class OnlineClientFactory implements OnlineRepositoryClient
             }
         } catch (ConnectionException $e) {
             report($e);
+
+            throw $e;
         }
 
         return null;
